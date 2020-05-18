@@ -1,0 +1,17 @@
+-- EX 1
+DELETE FROM Products where Price > 50;
+
+-- EX 2
+DELETE FROM Orders where ShipperID = 3 and EmployeeID <> 4;
+
+
+-- EX 3
+DELETE FROM Products WHERE Price NOT IN (18, 20, 25);
+
+
+-- EX 4
+DELETE FROM Products WHERE Price BETWEEN 25 AND 50;
+
+
+-- EX 5
+DELETE FROM Employees WHERE FirstName LIKE 'N%';

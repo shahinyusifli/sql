@@ -1,0 +1,43 @@
+-- https://www.w3resource.com/mysql-exercises/update-table-statement/update-table-exercise-1.php is source of exercies
+
+-- EX 1
+UPDATE Employees SET LastName = 'RICHARD';
+
+
+-- EX 2
+UPDATE Customers SET City = 'New York', Country = 'US';
+
+
+-- EX 3
+UPDATE Customers SET CustomerName = 'Winiston Chorchil', Address = 'SAN MARTIN'
+WHERE CustomerID = 2;
+
+
+-- EX 4
+UPDATE Products SET ProductName = 'VODKA' WHERE Price < .20;
+
+
+-- EX 5
+UPDATE Employees SET Notes = 'ANDREW IS GOOD BOY' WHERE FirstName = 'Andrew';
+
+
+-- EX 6
+UPDATE Products SET Price = 25 WHERE ProductID = 20 AND Price < 18;
+
+
+-- EX 7
+UPDATE Orders SET ProductName = 'VODKA' WHERE Price = 10 AND SupplierID = 1 AND NOT CategoryID = 2
+
+
+
+
+
+
+
+
+
+
+
+
+
+

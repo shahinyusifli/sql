@@ -1,0 +1,56 @@
+-- https://www.w3resource.com/mysql-exercises/alter-table-statement/index.php is source of exercies
+
+-- EX 1
+ALTER TABLE Suppliers RENAME Sppliers1;
+
+
+-- EX 2
+ALTER TABLE Orders ADD NEW_COL INT;
+
+
+-- EX 3
+ALTER TABLE OrderDetails ADD FIRST_ID INT FIRST;
+
+
+-- EX 4
+ALTER TABLE Orders ADD NEW_COL VARCHAR(50) AFTER ShipperID;
+
+
+-- EX 5
+ALTER TABLE Orders MODIFY NEW_COL DECIMAL(4,0);
+
+
+-- EX 6
+ALTER TABLE Orders DROP NEW_COL;
+
+
+-- EX 7
+ALTER TABLE Orders CHANGE EmployeeID EmployeeID_new decimal(4,0);
+
+
+-- EX 8
+ALTER TABLE Orders ADD PRIMARY KEY(ODER_ID_NEW);
+
+
+-- EX 9
+ALTER TABLE Orders DROP PRIMARY KEY;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

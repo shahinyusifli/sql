@@ -1,0 +1,70 @@
+-- https://www.w3resource.com/mysql-exercises/basic-simple-exercises/#PracticeOnline is source of exercies
+
+-- EX 1
+SELECT LastName, FirstName from Employees;
+
+
+-- EX 2
+SELECT DISTINCT Price from Orders;
+
+
+-- EX 3
+SELECT ProductName, Price from Products order by Price desc;
+
+
+-- EX 4
+SELECT ProductName, Price, Price * .15 PF from Products order by Price desc;
+
+
+-- EX 5
+SELECT LastName, FirstName from Employees order by BirthDate;
+
+
+-- EX 6
+SELECT SUM(Price) from Products;
+
+
+-- EX 7
+SELECT MAX(Price), MIN(Price) from Products;
+
+
+-- EX 8
+SELECT AVG(Price) from Products;
+
+
+-- EX 9
+SELECT COUNT(Price) from Products;
+
+
+-- EX 10
+SELECT COUNT(DISTINCT Price) from Products;
+
+
+-- EX 11
+SELECT UPPER(FirstName) from Employees;
+
+
+-- EX 12
+SELECT SUBSTRING(FirstName,1,3) from Employees;
+
+
+-- EX 13
+SELECT 171*214+625 Result;
+
+
+-- EX 14
+SELECT CONCAT(LastName, ' ', FirstName) 'Employees Name' from Employees;
+
+
+-- EX 15
+SELECT TRIM(FirstName) from Employees;
+
+
+
+
+
+
+
+
+
+
