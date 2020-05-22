@@ -1,0 +1,206 @@
+-- https://www.w3resource.com/sql-exercises/sql-aggregate-functions.php is source of exercies
+-- Used database is standart Nortwind
+
+-- EX 1	
+SELECT SUM(Price) as AllPrice from Products;
+
+
+-- EX 2
+SELECT Round(AVG(Price)) as AveragePrice from Products;
+
+
+-- EX 3
+SELECT COUNT(DISTINCT CustomerID) as TotalNumberOfCustomers from Orders;
+
+
+-- EX 4
+SELECT COUNT(*) as TotalNumberOfCustomers from Orders;
+
+
+-- EX 5
+SELECT COUNT(All Price) as AllPrice from Products;
+
+
+-- EX 6
+SELECT MAX(Price) as MaxPrice
+from Products
+where Price % 2 = 0;
+
+
+-- EX 7
+SELECT MIN(Price) as MinPrice 
+from Products
+where Price between 25 and 30;
+
+
+-- EX 8
+SELECT  SupplierID, MIN(Price) as MinPrice
+from Products
+Group by SupplierID;
+
+
+-- EX 9
+SELECT CategoryID, ROUND(MAX(Price)) as MaxPrice
+from Products
+group by CategoryID;
+
+
+-- EX 10
+SELECT ProductName, CategoryID, MAX(Price) as MaxPrice
+from Products
+group by ProductName, CategoryID;
+
+
+
+-- EX 11
+SELECT MAX(purch_amt), salesman_id
+from orders
+where ord_date = '2012-08-17'
+group by salesman_id;
+
+
+
+-- EX 12
+SELECT MAX(purch_amt),customer_id, ord_date
+from orders
+group by customer_id, ord_date
+HAVING MAX(ord_date) > 2000.00;
+
+
+-- EX 13
+SELECT customer_id, ord_date, MAX(purch_amt)
+FROM orders
+GRUOP BY customer_id, ord_date
+HAVING MAX(purch_amt) between 2000 and 6000;
+
+
+-- EX 14
+SELECT ord_date, customer_id, MAX(purch_amt)
+FROM orders
+GROUP BY ord_date, customer_id
+HAVING MAX(purch_amt) IN (2000, 3000, 6000);
+
+
+-- EX 15
+SELECT CategoryID, MAX(Price)
+from Products
+where CategoryID between 2 and 10
+group by CategoryID;
+
+
+-- EX 16
+SELECT CategoryID, MAX(Price)
+from Products
+where CategoryID between 5 and 15 
+group by CategoryID
+HAVING MAX(Price) > 20;
+
+
+-- EX 17
+SELECT CategoryID, ROUND(MAX(Price)) AS MaxPrice
+from Products
+where CategoryID between 5 and 15 
+group by CategoryID
+
+
+-- EX 18
+SELECT COUNT(DISTINCT CustomerID)
+from Orders
+Where OrderDate < '1998-11-06';
+
+
+-- EX 19
+SELECT COUNT(distinct LastName)
+FROM [Employees]
+where Notes is not null;
+
+
+-- EX 20
+SELECT SupplierID, CategoryID, Count(*)
+from Products
+group by SupplierID, CategoryID;
+
+
+-- EX 21
+SELECT Round(AVG(Price)) as AveragePrice
+FROM Products;
+
+
+-- EX 22
+SELECT Price
+from Products
+where Price IN (20, 22);
+
+
+-- EX 23
+SELECT DISTINCT ProductName, AVG(Price), ProductID
+from Products
+group by ProductName;
+
+
+-- EX 24
+SELECT COUNT(DISTINCT City) 
+FROM [Customers];
+
+
+-- EX 25
+SELECT emp_dept, COUNT(*)
+ FROM emp_details
+ GROUP BY emp_dept;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
